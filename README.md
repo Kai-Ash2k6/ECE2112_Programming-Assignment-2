@@ -35,28 +35,28 @@ Advance Computer Programming - S.Y. '24-'25  Name: K. A. Gas*ng-n || Section: 2 
 
  .... Mini Tutorial .....
 
-Step 1 — Import NumPy
-Code: 
-import numpy as np
+Step 1 — Import NumPy 
+
+	import numpy as np
 
 Step 2 — Generate a 5x5 Random Array
-Code: 
-X = np.random.rand(5, 5)  # Generates random numbers between 0 and 1
-print("Original X:\n", X)
+
+	X = np.random.rand(5, 5)  # Generates random numbers between 0 and 1
+	print("Original X:\n", X)
 
 Step 3 — Calculate Mean & Standard Deviation
-Code:
-mean = X.mean()
-std = X.std()
-print("\nMean of X:", mean)
-print("Standard Deviation of X:", std)
+
+	mean = X.mean()
+	std = X.std()
+	print("\nMean of X:", mean)
+	print("Standard Deviation of X:", std)
 
 Step 4 — Normalize the Array
-Code:
-X_normalized = (X - mean) / std
-print("\nNormalized X:\n", X_normalized)
+
+	X_normalized = (X - mean) / std
+	print("\nNormalized X:\n", X_normalized)
 
 Step 5 — Save the Normalized Array
-Code:
-np.save("X_normalized.npy", X_normalized)
+
+	np.save("X_normalized.npy", X_normalized)
 
