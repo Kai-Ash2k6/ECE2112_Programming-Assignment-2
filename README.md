@@ -34,7 +34,6 @@ Advance Computer Programming - S.Y. '24-'25  Name: K. A. Gas*ng-n || Section: 2 
 
 
  .... Mini Tutorial .....
-////////////////////////////////////////////////////////////////////////////////
 
 ## ** Problem 1: NumPy Array Normalization **
 
@@ -63,7 +62,7 @@ Step 5 — Save the Normalized Array
 
 	np.save("X_normalized.npy", X_normalized)
 
-////////////////////////////////////////////////////////////////////////////////
+
 
 ## ** Problem 2: DIVI by 3 **
 
