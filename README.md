@@ -13,7 +13,7 @@ Advance Computer Programming - S.Y. '24-'25  Name: K. A. Gas*ng-n || Section: 2 
 
  .... Analysis / Notes .....
     
-    1. 1. NumPy Array Normalization
+    1. NumPy Array Normalization
     - This program creates a 5x5 random NumPy array using np.random.rand().
     - It calculates the mean and standard deviation of the array using X.mean() and X.std().
     - The array is normalized using the formula:
@@ -31,3 +31,32 @@ Advance Computer Programming - S.Y. '24-'25  Name: K. A. Gas*ng-n || Section: 2 
     - Generalization / Conclusion:
           This problem demonstrates the power of loops and list manipulation in Python. It also shows how to structure data into a matrix format, 
           which is useful in numerical computing, simulations, and data organization.
+
+
+ .... Mini Tutorial .....
+
+Step 1 — Import NumPy
+Code: 
+import numpy as np
+
+Step 2 — Generate a 5x5 Random Array
+Code: 
+X = np.random.rand(5, 5)  # Generates random numbers between 0 and 1
+print("Original X:\n", X)
+
+Step 3 — Calculate Mean & Standard Deviation
+Code:
+mean = X.mean()
+std = X.std()
+print("\nMean of X:", mean)
+print("Standard Deviation of X:", std)
+
+Step 4 — Normalize the Array
+Code:
+X_normalized = (X - mean) / std
+print("\nNormalized X:\n", X_normalized)
+
+Step 5 — Save the Normalized Array
+Code:
+np.save("X_normalized.npy", X_normalized)
+
