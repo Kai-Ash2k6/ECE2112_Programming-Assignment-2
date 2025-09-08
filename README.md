@@ -35,6 +35,8 @@ Advance Computer Programming - S.Y. '24-'25  Name: K. A. Gas*ng-n || Section: 2 
 
  .... Mini Tutorial .....
 
+** Problem 1: NumPy Array Normalization **
+
 Step 1 — Import NumPy 
 
 	import numpy as np
@@ -59,4 +61,46 @@ Step 4 — Normalize the Array
 Step 5 — Save the Normalized Array
 
 	np.save("X_normalized.npy", X_normalized)
+
+** Problem 1: NumPy Array Normalization **
+
+*Step 1 — Define the Function*
+We’ll create a function called *d_by3_array* that does all the work.
+
+def d_by3_array(n):
+    divisible = []   # This list will store the perfect squares
+    num = 1         # Start counting from 1
+
+    def d_by3_array(n):
+    divisible = []   # This list will store the perfect squares
+    num = 1         # Start counting from 1
+
+    # Keep going until we have 'n' numbers
+    while len(divisible) < n:
+        sq = num ** 2       # Square the current number
+        if sq % 3 == 0:     # Check if the square is divisible by 3
+            divisible.append(sq)  # If yes, add it to the list
+        num += 1            # Go to the next number
+
+*Beginner Tip:*
+num ** 2 means num ^ num.
+sq % 3 == 0 checks if the number is divisible by 3.
+
+*Step 2 — Make a 10x10 Array*
+    # Turn the list into a 10x10 grid
+    array_2D = []       # Final table
+    index = 0
+
+    for row in range(10):          # Loop 10 times for 10 rows
+        current_row = []           # Make an empty row first
+        for col in range(10):      # Add 10 numbers per row
+            current_row.append(divisible[index])
+            index += 1             # Move to the next number
+        array_2D.append(current_row)  # Add the completed row to the table
+
+    return array_2D
+*Beginner Tip:*
+Think of rows as horizontal lines in the table.
+We use two loops: one for rows, one for columns.
+
 
